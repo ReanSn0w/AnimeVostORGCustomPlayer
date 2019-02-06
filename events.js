@@ -2,13 +2,7 @@ var player
 var cleanId
 
 function PlayerjsEvents(event,id,info){
-    if(event=="stop"){
-        player.api("next");
-        player.api("play");
-    }
-    if(event=="pause"){
-        stateSaver();
-    }
+    //Обработка событий плеера
  }
 
  function loadState() {
@@ -27,12 +21,13 @@ function PlayerjsEvents(event,id,info){
  }
 
 async function stateSaver() {
-    for (i=true; i; i=true) {
-        //Подготовка объекта для cookie
-        var obj = {
-            num: player.api("playlist_id"),
-            second: player.api("second"),
-        };
-        localStorage.setItem(cleanId, obj);
-    }
+    //Подготовка объекта для cookie
+    var obj = {
+        num: player.api("playlist_id"),
+        second: player.api("second"),
+    };
+    //Сохранение объекта
+    localStorage.setItem(cleanId, obj);
+    //Рекурсивный отложенный запуск
+    setTimeout(stateSaver().then(), 30000);
  }
