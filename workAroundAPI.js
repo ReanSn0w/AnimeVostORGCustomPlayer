@@ -88,7 +88,7 @@ function playlist() {
     }
     var pl = getPlaylistById(id);
     playlist = rebuildPlaylist(pl);
-    var player = new Playerjs({id:"player", file: playlist});
+    player = new Playerjs({id:"player", file: playlist});
 }
 
 document.onload(
