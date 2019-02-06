@@ -91,9 +91,8 @@ function playlist() {
     playlist = rebuildPlaylist(pl);
     player = new Playerjs({id:"player", file: playlist});
     loadState();
-    timer().then();
 }
 
-stateSaver().then();
 playlist();
+stateSaver().then();
 timer();

@@ -29,5 +29,5 @@ async function stateSaver() {
     //Сохранение объекта
     localStorage.setItem(cleanId, obj);
     //Рекурсивный отложенный запуск
-    setTimeout(stateSaver().then(), 30000);
+    setTimeout(stateSaver().then, 30000);
  }

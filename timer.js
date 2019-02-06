@@ -7,6 +7,6 @@ async function timer() {
     }
     time--;
     obj.value = time;
-    setTimeout(timer, 5000);
+    setTimeout(timer, 60000);
     return
 }
