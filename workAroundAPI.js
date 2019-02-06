@@ -33,6 +33,7 @@ function getIdFromURL(url) {
             break;
         }
     }
+    cleanId = url.substring(lastslash+1, lastnum+1)
     return url.substring(lastslash+1, lastnum+1)
 }
 
@@ -89,6 +90,7 @@ function playlist() {
     var pl = getPlaylistById(id);
     playlist = rebuildPlaylist(pl);
     player = new Playerjs({id:"player", file: playlist});
+    loadState();
 }
 
 document.onload(
