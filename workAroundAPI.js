@@ -18,6 +18,9 @@ function checkIfNum(a) {
 }
 
 function getIdFromURL(url) {
+    if (url == null) {
+        return 0;
+    }
     var lastslash = 0;
     var id = false;
     for (i=0; i<url.length; i++) {
@@ -83,16 +86,20 @@ function rebuildPlaylist(pl) {
 
 function playlist() {
     var id = getIdFromURL(getParameterByName("url"));
-    if (id == "" || id == null || id == undefined) {
-        alert("Введи ссылку в поле наверху и нажми Enter")
+    if (id == 0) {
+        alert("Не получилось извлечь id из ссылки");
         return
     }
     var pl = getPlaylistById(id);
+    if (pl == "") {
+        alert("Плейлист не был найден!");
+        return
+    }
     playlist = rebuildPlaylist(pl);
     player = new Playerjs({id:"player", file: playlist});
     loadState();
+    stateSaver().then();
 }
 
 timer().then();
 playlist();
-stateSaver().then();
