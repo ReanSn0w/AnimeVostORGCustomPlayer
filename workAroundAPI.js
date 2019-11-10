@@ -65,7 +65,7 @@ function getNumber(str) {
 function resort(item1, item2) {
     var num1 = getNumber(item1["name"]);
     var num2 = getNumber(item2["name"]);
-    return parseInt(num1) > parseInt(num2)
+    return parseInt(num1) - parseInt(num2)
 }
 
 function rebuildPlaylist(pl) {
