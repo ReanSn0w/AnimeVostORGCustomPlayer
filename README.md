@@ -14,3 +14,5 @@
 - Обход заблокированных материалов (Раньше в API проблем с этим не было), так материалы убранные скрытые на сайте с Российских IP будут доступны в штатном режиме.
 
 ## Приятный просмотр начинается [ТУТ](https://reansn0w.github.io/AnimeVostORGCustomPlayer/)
+
+## [Наметки Web приложения на основе AnimeVost Public API](https://reansn0w.github.io/AnimeVostORGCustomPlayer/New)
