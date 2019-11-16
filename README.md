@@ -15,4 +15,4 @@
 
 ## Приятный просмотр начинается [ТУТ](https://reansn0w.github.io/AnimeVostORGCustomPlayer/)
 
-## [Наметки Web приложения на основе AnimeVost Public API](https://reansn0w.github.io/AnimeVostORGCustomPlayer/New)
+## [Наметки Web приложения на основе AnimeVost Public API](https://reansn0w.github.io/AnimeVostORGCustomPlayer/New/)
